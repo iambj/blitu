@@ -1,5 +1,7 @@
 # blitU
 
+![Node.js CI](https://github.com/iambj/blitu/workflows/Node.js%20CI/badge.svg)
+
 _"utilb".split("").reverse().join("")_
 
 ---
