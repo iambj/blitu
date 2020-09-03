@@ -7,8 +7,8 @@
         "test": "tests"
     },
     "scripts": {
-        "test": "jest",
-        "testwatch": "jest --watchAll"
+        "test": "jest --watchAll",
+        "pipelineTest": "jest"
     },
     "repository": {
         "type": "git",
