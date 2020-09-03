@@ -1,0 +1,29 @@
+{
+  "name": "blitu",
+  "version": "1.0.0",
+  "description": "A small package of utilities I find myself writing over and over.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iambj/blitu.git"
+  },
+  "keywords": [
+    "utility",
+    "helpers"
+  ],
+  "author": "Brandon Johnson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iambj/blitu/issues"
+  },
+  "homepage": "https://github.com/iambj/blitu#readme",
+  "devDependencies": {
+    "jest": "^26.4.2"
+  }
+}
