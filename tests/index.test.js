@@ -133,8 +133,10 @@ describe("Test benchmarking.", () => {
                     arr[i] = "a";
                 }
             },
-            [20000]
+            [20000],
+            false
         );
+        console.log(result);
         expect(result).toMatch(/([^0-9]*\.[0-9]|0)*s/);
     });
 });
