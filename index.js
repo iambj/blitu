@@ -113,7 +113,7 @@ function benchmark(func, args, log = true) {
     if (result) {
         return result;
     } else {
-        return `Time: ${timing}`;
+        return `Time: ${timing}s`;
     }
 }
 

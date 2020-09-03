@@ -136,7 +136,7 @@ describe("Test benchmarking.", () => {
             [20000],
             false
         );
-        console.log(result);
+        // console.log(result);
         expect(result).toMatch(/([^0-9]*\.[0-9]|0)*s/);
     });
 });
