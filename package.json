@@ -1,13 +1,13 @@
 {
     "name": "blitu",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "A small package of utilities I find myself writing over and over.",
     "main": "index.js",
     "directories": {
         "test": "tests"
     },
     "scripts": {
-        "test": "jest --watchAll",
+        "test": "jest --watchAll --verbose --coverage",
         "pipelineTest": "jest"
     },
     "repository": {

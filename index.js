@@ -1,14 +1,27 @@
-// Shuffle and array using Fisher-Yates (TODO:)
+// Shuffle an array using Fisher-Yates
 // Returns a new array and is non-mutating.
 function shuffleArray(orderedArr) {
     let mutate = [...orderedArr];
-    let newArr = [];
-    while (mutate.length > 0) {
-        let pick = Math.floor(Math.random() * mutate.length);
-        let items = mutate.splice(pick, 1)[0];
-        newArr.push(items);
+    let m = orderedArr.length,
+        i;
+
+    while (m) {
+        i = Math.floor(Math.random() * m--);
+        [mutate[i], mutate[m]] = [mutate[m], mutate[i]];
     }
-    return newArr;
+    return mutate;
+
+    // Below works but we use extra time because of compacting the array after splice().
+    // Fisher-Yates sorts and places the items in the back of the array (m). It is nearly
+    // 5 times faster not having to compact the array.
+    // let mutate = [...orderedArr];
+    // let newArr = [];
+    // while (mutate.length > 0) {
+    //     let pick = Math.floor(Math.random() * mutate.length);
+    //     let items = mutate.splice(pick, 1)[0]; // Remove item from the "hat"
+    //     newArr.push(items);
+    // }
+    // return newArr;
 }
 
 // Pick one item from an array, optionally obeying weights.
@@ -101,10 +114,15 @@ function padNumber(num, desiredDigits) {
 
 // Benchmark a function. Takes an array of parameters.
 // Logs by default as this is a debugging tool. "all" logs everything.
-function benchmark(func, args, log = true) {
+function benchmark(func, args = null, log = true) {
     let startTime = Date.now();
     log == true || log == "all" ? console.log("start", startTime) : null;
-    let result = func(...args);
+    let result;
+    if (args) {
+        result = func(...args);
+    } else {
+        result = func();
+    }
     let endTime = Date.now();
     log == true || log == "all" ? console.log("end", endTime) : null;
     let timing = (endTime - startTime) / 1000;

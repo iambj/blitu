@@ -1,6 +1,6 @@
 # blitU
 
-![Node.js CI](https://github.com/iambj/blitu/workflows/Node.js%20CI/badge.svg)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/iambj/blitu/Node.js%20CI) ![GitHub](https://img.shields.io/github/license/iambj/blitu)
 
 _"utilb".split("").reverse().join("")_
 
