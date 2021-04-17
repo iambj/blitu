@@ -25,6 +25,9 @@
     },
     "homepage": "https://github.com/iambj/blitu#readme",
     "devDependencies": {
-        "jest": "^26.4.2"
+        "@types/jest": "^26.0.22",
+        "jest": "^26.4.2",
+        "ts-jest": "^26.5.5",
+        "typescript": "^4.2.4"
     }
 }
