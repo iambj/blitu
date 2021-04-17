@@ -16,4 +16,17 @@ describe("Test time and date functions", () => {
             expect(result).toBe(`${month}/${day}/${year}`);
         });
     });
+
+    describe("test formatSeconds", () => {
+        it("it should display seconds without a 0", () => {
+            const seconds = 10;
+            const result = formatSeconds(seconds);
+            expect(result).toBe("10");
+        });
+        it("it should display seconds with a 0 pad", () => {
+            const seconds = 7;
+            const result = formatSeconds(seconds);
+            expect(result).toBe("07");
+        });
+    });
 });
