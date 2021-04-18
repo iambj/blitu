@@ -1,4 +1,4 @@
-import { formatDate, formatSeconds } from "../timeAndDate";
+import { formatDate, formatSeconds, formatMinutes } from "../timeAndDate";
 
 describe("Test time and date functions", () => {
     describe("test formatDate to display in MM/DD/YYYY format", () => {
@@ -27,6 +27,24 @@ describe("Test time and date functions", () => {
             const seconds = 7;
             const result = formatSeconds(seconds);
             expect(result).toBe("07");
+        });
+    });
+
+    describe("test formMinutes", () => {
+        it("it should display minutes without a leading 0", () => {
+            const seconds = 720;
+            const result = formatMinutes(seconds);
+            expect(result).toBe("12");
+        });
+        it("it should display minutes with a 0 pad", () => {
+            const seconds = 60;
+            const result = formatMinutes(seconds);
+            expect(result).toBe("01");
+        });
+        it("it should display minutes with a 0 pad", () => {
+            const seconds = 350;
+            const result = formatMinutes(seconds);
+            expect(result).toBe("05");
         });
     });
 });
