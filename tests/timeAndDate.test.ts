@@ -1,4 +1,9 @@
-import { formatDate, formatSeconds, formatMinutes } from "../timeAndDate";
+import {
+    formatDate,
+    formatSeconds,
+    formatMinutes,
+    formatHours,
+} from "../timeAndDate";
 
 describe("Test time and date functions", () => {
     describe("test formatDate to display in MM/DD/YYYY format", () => {
@@ -45,6 +50,24 @@ describe("Test time and date functions", () => {
             const seconds = 350;
             const result = formatMinutes(seconds);
             expect(result).toBe("05");
+        });
+    });
+
+    describe("test formatHours", () => {
+        it("it should display Hours without a leading 0", () => {
+            const seconds = 43200;
+            const result = formatHours(seconds);
+            expect(result).toBe("12");
+        });
+        it("it should display Hours with a 0 pad", () => {
+            const seconds = 3600;
+            const result = formatHours(seconds);
+            expect(result).toBe("01");
+        });
+        it("it should display Hours with a 0 pad", () => {
+            const seconds = 600;
+            const result = formatHours(seconds);
+            expect(result).toBe("00");
         });
     });
 });
