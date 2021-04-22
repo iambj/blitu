@@ -1,6 +1,6 @@
 {
     "name": "blitu",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "description": "A small package of utilities I find myself writing over and over.",
     "main": "index.js",
     "directories": {
