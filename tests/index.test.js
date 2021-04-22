@@ -1,4 +1,4 @@
-const _b = require("../index");
+const _b = require("../src/index");
 
 describe("Test util functions", () => {
     describe("pickOne", () => {
@@ -134,7 +134,7 @@ describe("Test benchmarking.", () => {
                 }
             },
             [20000],
-            false
+            false,
         );
         // console.log(result);
         expect(result).toMatch(/([^0-9]*\.[0-9]|0)*s/);
