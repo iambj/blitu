@@ -3,7 +3,7 @@ import {
     formatSeconds,
     formatMinutes,
     formatHours,
-} from "../timeAndDate";
+} from "../src/timeAndDate";
 
 describe("Test time and date functions", () => {
     describe("test formatDate to display in MM/DD/YYYY format", () => {

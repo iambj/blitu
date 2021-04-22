@@ -1,16 +1,16 @@
-import { numericSort } from "../sort";
+import { numericSort } from "../src/sort";
 
 describe("Test numeric sort", () => {
     // empty
     it("an empty array as an argument should return a new empty array", () => {
-        let firstArr = [];
+        let firstArr: any[] = [];
         const result = numericSort(firstArr);
         expect(result.length).toBe(0);
         expect(result === firstArr).toBeFalsy();
     });
     // correct
     it("should return a correctly sorted numeric array", () => {
-        let firstArr = [-10, 90, 9, 3, 6];
+        let firstArr: number[] = [-10, 90, 9, 3, 6];
         const result = numericSort(firstArr);
         let same = true;
         firstArr.every((a, i) => {
