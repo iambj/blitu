@@ -1,6 +1,6 @@
 {
     "name": "blitu",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "description": "A small package of utilities I find myself writing over and over.",
     "main": "index.js",
     "directories": {
@@ -28,6 +28,7 @@
         "@types/jest": "^26.0.22",
         "jest": "^26.4.2",
         "ts-jest": "^26.5.5",
+        "ts-node": "^9.1.1",
         "typescript": "^4.2.4"
     }
 }
