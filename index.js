@@ -24,6 +24,8 @@ function shuffleArray(orderedArr) {
     // return newArr;
 }
 
+// array and set functions - union, intersection, difference
+
 // Pick one item from an array, optionally obeying weights.
 // Pick: Functions, strings, numbers.
 // Weights are defaulted to 1 and simply go up in increments of 1.
