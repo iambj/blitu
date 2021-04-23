@@ -1,8 +1,9 @@
 {
     "name": "blitu",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "A small package of utilities I find myself writing over and over.",
-    "main": "lib/",
+    "main": "lib/**/*",
+  
     "types": "lib/**/*",
     "directories": {
         "test": "tests"
@@ -17,7 +18,7 @@
         "lint": "tslint -p tsconfig.json",
         "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
         "prepare": "npm run build",
-        "prepublishOnly": "npm test && npm run lint",
+        "OFFprepublishOnly": "npm test && npm run lint",
         "preversion": "npm run lint"
     },
     "repository": {
