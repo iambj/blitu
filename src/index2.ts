@@ -34,7 +34,22 @@ function randomInRange(min: number = 0, max: number = 100): number {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+/**
+ * Generate a random number of a certain amount of digits
+ * @param count
+ * @returns a string
+ */
+function randomIntOfLength(count: number): number {
+    // Generate a random number of a certain amount of digits
+    let num: string = "";
+    for (let i = 0; i < count; i++) {
+        num += Math.floor(Math.random() * Math.floor(9));
+    }
+    return parseInt(num);
+}
+
 module.exports = {
     shuffleArray,
     randomInRange,
+    randomIntOfLength,
 };
