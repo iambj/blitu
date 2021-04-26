@@ -48,6 +48,21 @@ function randomIntOfLength(count: number): number {
     return parseInt(num);
 }
 
+/**
+ *
+ * @param str the initial string
+ * @param total desired length of string
+ * @param symbol what to pad the text with
+ * @returns
+ */
+
+function padText(str: string, total: number, symbol = " ") {
+    while (str.length < total) {
+        str += symbol;
+    }
+    return str;
+}
+
 module.exports = {
     shuffleArray,
     randomInRange,
