@@ -63,8 +63,24 @@ function padText(str: string, total: number, symbol = " ") {
     return str;
 }
 
+/**
+ * Returns a string with the desired number of 0's padding the left.
+ * Returns the same number if no padding is needed as type number.
+ *
+ * @param num
+ * @param desiredDigits
+ * @returns
+ */
+// TODO: add test coverage
+function padNumber(num: number, desiredDigits: number) {
+    if (desiredDigits - String(num).length < 0) return num;
+    return new Array(desiredDigits - String(num).length).fill(0).join("") + num;
+}
+console.log(padNumber(11, 30));
+
 module.exports = {
     shuffleArray,
     randomInRange,
     randomIntOfLength,
+    padNumber,
 };
