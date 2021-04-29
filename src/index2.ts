@@ -3,13 +3,13 @@
  * Shuffle an array using Fisher-Yates.
  * Returns a new array and is non-mutating.
  *
- * @param orderedArr
- * @returns an array
+ * @param {array} arr - an array to be shuffled
+ * @return {array} Returns a new shuffled array that didn't mutate the input
  */
 
-function shuffleArray<ArrType>(orderedArr: ArrType[]): ArrType[] {
-    const mutate: ArrType[] = [...orderedArr];
-    let m: number = orderedArr.length;
+function shuffleArray<ArrType>(arr: ArrType[]): ArrType[] {
+    const mutate: ArrType[] = [...arr];
+    let m: number = arr.length;
     let i: number;
 
     while (m) {
@@ -22,12 +22,13 @@ function shuffleArray<ArrType>(orderedArr: ArrType[]): ArrType[] {
 const arr: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const arrO = [1, 2, 3, 4, 5, 6, 7, 8, {}];
 
-console.log(shuffleArray(arrO));
-
 /**
  * Generate a random number in range, inclusive
  * Defaults to min=0 and max=100 for working with percentages quickly.
  * Negative numbers are acceptable.
+ * @param {number} min - The lowest random number desired inclusively
+ * @param {number} max - The largest random number desired inclusively
+ * @return {number} - The random in range
  */
 
 function randomInRange(min: number = 0, max: number = 100): number {
