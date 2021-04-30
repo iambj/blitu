@@ -2,8 +2,7 @@
     "name": "blitu",
     "version": "2.0.1",
     "description": "A small package of utilities I find myself writing over and over.",
-    "main": "lib/**/*",
-  
+    "main": "lib/",
     "types": "lib/**/*",
     "directories": {
         "test": "tests"
