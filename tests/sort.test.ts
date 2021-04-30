@@ -11,13 +11,16 @@ describe("Test numeric sort", () => {
     // correct
     it("should return a correctly sorted numeric array", () => {
         let firstArr: number[] = [-10, 90, 9, 3, 6];
+        let sortedArr: number[] = [-10, 3, 6, 9, 90];
         const result = numericSort(firstArr);
-        let same = true;
-        firstArr.every((a, i) => {
+        let same: boolean = true;
+        sortedArr.every((a, i) => {
+            console.log(a, result[i], same);
             if (a !== result[i]) {
-                console.log(a, result[i]);
                 same = false;
+                return false;
             }
+            return true;
         });
         expect(same).toBe(true);
         expect(result === firstArr).toBeFalsy();
