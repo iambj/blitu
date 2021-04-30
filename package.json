@@ -18,7 +18,7 @@
         "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
         "prepare": "npm run build",
         "OFFprepublishOnly": "npm test && npm run lint",
-        "preversion": "npm run lint"
+        "OFFpreversion": "npm run lint"
     },
     "repository": {
         "type": "git",
