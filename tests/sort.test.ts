@@ -15,7 +15,6 @@ describe("Test numeric sort", () => {
         const result = numericSort(firstArr);
         let same: boolean = true;
         sortedArr.every((a, i) => {
-            console.log(a, result[i], same);
             if (a !== result[i]) {
                 same = false;
                 return false;
