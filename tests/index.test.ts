@@ -21,3 +21,30 @@ describe("Test shuffling.", () => {
         expect(result).not.toEqual(arr);
     });
 });
+
+describe("Test random numbers.", () => {
+    it("Should return a random number between 0 and 100", () => {
+        let result = _b.randomInRange();
+        expect(result).toBeGreaterThanOrEqual(0);
+        expect(result).toBeLessThanOrEqual(100);
+        // result >= 0 && result <= 100).toBe(true);
+    });
+    it("Should return a 1", () => {
+        let result = _b.randomInRange(1, 1);
+        expect(result).toBe(1);
+    });
+    it("Should return a -1", () => {
+        let result = _b.randomInRange(-1, -1);
+        expect(result).toBe(-1);
+    });
+    it("Should return a negative number between 0 and -100", () => {
+        let result = _b.randomInRange(0, -100);
+        expect(result).toBeGreaterThanOrEqual(-100);
+        expect(result).toBeLessThanOrEqual(0);
+    });
+    it("Should return a negative number between -100 and 100", () => {
+        let result = _b.randomInRange(-100, 100);
+        expect(result).toBeGreaterThanOrEqual(-100);
+        expect(result).toBeLessThanOrEqual(100);
+    });
+});
