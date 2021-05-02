@@ -73,11 +73,11 @@ function padText(str: string, total: number, symbol = " ") {
  * @returns
  */
 // TODO: add test coverage
-function padNumber(num: number, desiredDigits: number) {
+function padNumber(num: number, desiredDigits: number = 2) {
     if (desiredDigits - String(num).length < 0) return num;
     return new Array(desiredDigits - String(num).length).fill(0).join("") + num;
 }
-console.log(padNumber(11, 30));
+console.log(padNumber(1));
 
 module.exports = {
     shuffleArray,

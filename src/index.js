@@ -109,7 +109,7 @@ function padText(str, total, symbol = " ") {
 // Returns a string with the desired number of 0's padding the left.
 // Returns the same number if no padding is needed as type number.
 // TODO: add test coverage
-function padNumber(num, desiredDigits) {
+function padNumber(num, desiredDigits = 1) {
     if (desiredDigits - String(num).length < 0) return num;
     return new Array(desiredDigits - String(num).length).fill(0).join("") + num;
 }
