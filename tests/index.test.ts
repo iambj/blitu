@@ -1,4 +1,4 @@
-const _b = require("../src/index");
+const _b = require("../src/index2");
 
 describe("Test shuffling.", () => {
     it("Should return a shuffled array.", () => {
@@ -48,3 +48,91 @@ describe("Test random numbers.", () => {
         expect(result).toBeLessThanOrEqual(100);
     });
 });
+
+describe("Test padNumber", () => {
+    it("", () => {
+        let result = _b.randomInRange();
+        expect(result).toBeGreaterThanOrEqual(0);
+        expect(result).toBeLessThanOrEqual(100);
+        // result >= 0 && result <= 100).toBe(true);
+    });
+});
+
+// describe("Test pickOne", () => {
+//     it("test pickOne null input", () => {
+//         let result = _b.pickOne();
+//         expect(result).toBeNull();
+//     });
+
+//     it("test pickOne basic array empty", () => {
+//         let result = _b.pickOne([]);
+//         expect(result).toBeNull();
+//     });
+
+//     it("test pickOne basic array", () => {
+//         let arr = ["A", "B", "C"];
+//         let result = _b.pickOne(arr);
+//         expect(result).toMatch(/.*/);
+//     });
+
+//     it("test pickOne basic array with weights", () => {
+//         // Pick between a string, a number, or a function
+//         let arr = [
+//             { item: "A", weight: 1 },
+//             { item: "B", weight: 10 },
+//             { item: "C", weight: 1 },
+//             { item: "D", weight: 1 },
+//             { item: "E", weight: 1 },
+//         ];
+//         let arrNums = [
+//             { item: 1, weight: 1 },
+//             { item: 2, weight: 10 },
+//         ];
+
+//         let arrFuncs = [
+//             {
+//                 item: () => {
+//                     return 1;
+//                 },
+//                 weight: 1,
+//             },
+//             {
+//                 item: () => {
+//                     return 2;
+//                 },
+//                 weight: 10,
+//             },
+//         ];
+
+//         let result = _b.pickOne(arr);
+//         let resultNums = _b.pickOne(arrNums);
+//         let resultFuncs = _b.pickOne(arrFuncs);
+//         expect(result).toMatch(/.*/);
+//         expect(resultNums).toBeGreaterThanOrEqual(1);
+//         expect(typeof resultFuncs).toBe("function");
+//     });
+
+//     it("test pickOne basic array with a missing weight", () => {
+//         let arr = [
+//             { item: "A", weigsht: 1 },
+//             { item: "B", weight: 10 },
+//             { item: "C", weight: 1 },
+//             { item: "D", weight: 1 },
+//             { item: "E", weight: 1 },
+//         ];
+//         expect(() => {
+//             _b.pickOne(arr);
+//         }).toThrow();
+//     });
+//     it("test pickOne with wrongly formatted objects", () => {
+//         let arr = [{ item: "A", weight: 1, extra: 1 }];
+//         expect(() => {
+//             _b.pickOne(arr);
+//         }).toThrow();
+//     });
+//     it("test pickOne with a non-array passed", () => {
+//         expect(() => {
+//             _b.pickOne("not an array");
+//         }).toThrow();
+//     });
+// });

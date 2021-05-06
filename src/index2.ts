@@ -77,11 +77,67 @@ function padNumber(num: number, desiredDigits: number = 2) {
     if (desiredDigits - String(num).length < 0) return num;
     return new Array(desiredDigits - String(num).length).fill(0).join("") + num;
 }
-console.log(padNumber(1));
+
+// Pick one item from an array, optionally obeying weights.
+// Pick: Functions, strings, numbers.
+// Weights are defaulted to 1 and simply go up in increments of 1.
+//    ie.: a weight of 2 has a ration of 2:1, 3 has a ration or 3:1 and 10, 10:1.
+// Currently if you use an object with weights, all need to be objects with weights.
+// TODO: allow for some entries to be objects with a weight, while others just strings
+// TODO: Use a default of weight:1 if it is omitted.
+// function pickOne(objs: object[] | []) {
+//     // Pass a simple array or pass in a array of objects to
+//     // with weights: { toBePicked: weight: 1}
+//     // 1 is default for all and is the standard
+//     if (!objs || objs.length === 0) return null;
+//     if (Array.isArray(objs)) {
+//         if (typeof objs[0] === "object") {
+//             // Get name of item to be picked.
+//             // Only two properties are allowed,
+//             // and one must be "weight"
+//             let propName = "";
+//             for (const [i, k] of objs.entries()) {
+//                 let count = 0;
+//                 let weightIncluded = false;
+
+//                 for (const j in k) {
+//                     count++;
+//                     if (k.hasOwnProperty(j)) {
+//                         if (j === "weight") {
+//                             weightIncluded = true;
+//                         } else {
+//                             propName = j;
+//                         }
+//                     }
+//                 }
+//                 if (!weightIncluded) throw new Error("Weight not included.");
+//                 if (count > 2) {
+//                     throw new Error("Too many items in objects to pick from.");
+//                 }
+//             }
+//             let weightedArr: any = [];
+//             for (const i of objs as { weight: number; propName: string }[]) {
+//                 let weight = i.weight;
+//                 let arr = new Array(weight).fill(i[propName]);
+//                 weightedArr.push(...arr);
+//             }
+
+//             let selection = Math.floor(Math.random() * objs.length);
+//             let shuffled = shuffleArray(weightedArr);
+//             return shuffled[selection];
+//         } else {
+//             let selection = Math.floor(Math.random() * objs.length);
+//             return objs[selection];
+//         }
+//     } else {
+//         throw new Error("An array is needed as input");
+//     }
+// }
 
 module.exports = {
     shuffleArray,
     randomInRange,
     randomIntOfLength,
     padNumber,
+    // pickOne,
 };
