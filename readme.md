@@ -2,7 +2,6 @@
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/iambj/blitu/Node.js%20CI) ![GitHub](https://img.shields.io/github/license/iambj/blitu) ![](https://img.shields.io/badge/coverage-85%25-green)
 
-
 _"utilb".split("").reverse().join("")_
 
 ---
