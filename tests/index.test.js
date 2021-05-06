@@ -119,7 +119,7 @@ describe("Test random numbers.", () => {
         expect(result).toBeGreaterThanOrEqual(10);
     });
     it("Should return a maximum number of 1000 using only a maximum", () => {
-        let result = _b.randomInRange((max = 10));
+        let result = _b.randomInRange((max = 1000));
         expect(result).toBeLessThanOrEqual(1000);
     });
 });
