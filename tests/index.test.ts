@@ -1,4 +1,4 @@
-const _b = require("../src/index2");
+const _b = require("../src/indexTS");
 
 describe("Test shuffling.", () => {
     it("Should return a shuffled array.", () => {
