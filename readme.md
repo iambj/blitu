@@ -6,7 +6,7 @@ _"utilb".split("").reverse().join("")_
 
 ---
 
-A small package of utilities I find myself writing over and over.
+A small package of JavaScript utilities I find myself writing over and over.
 
 - Shuffle arrays
 - Pick one item from an array (with the ability to set a weight)
